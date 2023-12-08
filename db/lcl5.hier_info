@@ -1,0 +1,54 @@
+|Block12
+T0 <= Block11:inst2.C
+KEY[3] => inst4.CLK
+KEY[3] => inst5.CLK
+KEY[3] => inst6.CLK
+T1 <= Block11:inst3.C
+T2 <= Block11:inst18.C
+LEDR[0] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block12|Block11:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst5.IN0
+B => inst5.IN1
+A => inst4.IN0
+A => inst4.IN1
+
+
+|Block12|Block11:inst18
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst5.IN0
+B => inst5.IN1
+A => inst4.IN0
+A => inst4.IN1
+
+
+|Block12|Block11:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst5.IN0
+B => inst5.IN1
+A => inst4.IN0
+A => inst4.IN1
+
+
+|Block12|Block10:inst9
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+A => inst.IN1
+
+
+|Block12|Block10:inst10
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+A => inst.IN1
+
+
+|Block12|Block10:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+A => inst.IN1
+
+

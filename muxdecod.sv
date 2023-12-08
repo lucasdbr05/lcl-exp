@@ -1,0 +1,21 @@
+module muxdecod(
+  	input [6:0] Entrada,
+	output Saida
+);
+  
+  	logic [7:0] entradas_mux;
+  	logic [15:0] saidas_decod;
+  	
+  	mux8 d1 (.Dado(entradas_mux),.Escolha(Entrada[6:4]), .Saida(Saida));
+    decod16 d2 (.Entrada(Entrada[3:0]),.Saida(saidas_decod));
+
+  	assign entradas_mux[0] = 1'b1;
+   assign entradas_mux[1] = saidas_decod[0] | saidas_decod[1];
+  	assign entradas_mux[2] = 1'b1;
+	assign entradas_mux[3] = 1'b0;
+	assign entradas_mux[4] = 1'b0;
+  	assign entradas_mux[5] = 1'b1;
+	assign entradas_mux[6] = 1'b0;
+	assign entradas_mux[7] = 1'b0;
+  
+endmodule
